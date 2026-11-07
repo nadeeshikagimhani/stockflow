@@ -6,20 +6,20 @@ import {
 
 export const sidebarNavFDO = [
   {
-    label: "Stock Requests",
+    lable: "Stock Requests",
     icon: ClipboardList,
-    to: "/fdo/stock-requests",
-    activePaths: ["/fdo", "/fdo/stock-requests"],
+    path: "/fdo/stock-requests",
+    activePath: ["/fdo", "/fdo/stock-requests"],
   },
   {
-    label: "Distributions",
+    lable: "Distributions",
     icon: Truck,
-    to: "/fdo/distributions",
+    path: "/fdo/distributions",
   },
   {
-    label: "Run History",
+    lable: "Run History",
     icon: History,
-    to: "/fdo/run-history",
+    path: "/fdo/run-history",
   },
 ];
 

@@ -1,7 +1,10 @@
+import SMLayout from "@/layouts/SMLayout"
 
 const StockSummary = () => {
   return (
-    <div>index</div>
+    <SMLayout>
+      index
+    </SMLayout>
   )
 }
 

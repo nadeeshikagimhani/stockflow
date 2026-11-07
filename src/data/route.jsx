@@ -3,6 +3,11 @@ import * as Pages from '@/pages'
 export const routes = [
 
    // Stock Manager
+   {
+    route: "/",
+    title: "Stock Summary",
+    page: <Pages.StockSummary/>
+  },
   {
     route: "/stock-summary",
     title: "Stock Summary",
@@ -28,22 +33,22 @@ export const routes = [
   {
     title: "Stock Requests",
     route: "/fdo",
-    pages: <Pages.FDOStockRequests/>
+    page: <Pages.FDOStockRequests/>
   },
   {
     title: "Stock Requests",
     route: "/fdo/stock-requests",
-    pages: <Pages.FDOStockRequests/>
+    page: <Pages.FDOStockRequests/>
   },
   {
     title: "Distributions",
     route: "/fdo/distributions",
-    pages: <Pages.FDODistributions/>
+    page: <Pages.FDODistributions/>
   },
   {
     title: "Run History",
     route: "/fdo/run-history",
-    pages: <Pages.FDORunHistory/>
+    page: <Pages.FDORunHistory/>
   },
 
 

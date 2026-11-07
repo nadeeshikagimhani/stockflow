@@ -4,7 +4,7 @@ import { Navigate, Route, Routes } from "react-router-dom"
 const AppRouter = () => {
   return (
     <Routes>
-      {routes.map(( route, page ) => (
+      {routes.map(( { route, page }) => (
         <Route key={route} path={route} element={page}/>
       ))}
 
