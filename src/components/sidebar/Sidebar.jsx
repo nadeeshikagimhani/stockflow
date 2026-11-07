@@ -1,13 +1,11 @@
-import SidebarHeader from "./comp/SidebarHeader"
-import SidebarNav from "./comp/SidebarNav"
-import SidebarProfile from "./comp/SidebarProfile"
+import { SidebarHeader, SidebarNav, SidebarProfile } from './comp'
 
-const Sidebar = ({nav, header}) => {
+const Sidebar = ({nav, header, profile}) => {
   return (
-    <div>
+    <div className="flex flex-col w-60 border-r border-gray-200 sticky top-0 h-screen z-40">
       <SidebarHeader header={header}/>
       <SidebarNav items={nav}/>
-      <SidebarProfile/>
+      <SidebarProfile profile={profile} />
     </div>
   )
 }

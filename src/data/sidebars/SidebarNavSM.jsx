@@ -1,6 +1,6 @@
 import { BarChart2, Clipboard, PackageCheck, RotateCcw } from "lucide-react";
 
-export const SidebarnavItems = [
+export const SidebarNavSM = [
   {
     lable: "Stock Summary",
     path: "/stock-summary",
@@ -28,4 +28,10 @@ export const SidebarnavItems = [
 export const SidebarHeaderSM = {
   title: "Stock Flow",
   subtitle: "Distribution System"
-}
+};
+
+export const sidebarProfileSM = {
+  name: "Nadeeshika Gimhani",
+  role: "Stock Manager",
+  detail: "nadgimhani4@gmail.com"
+};

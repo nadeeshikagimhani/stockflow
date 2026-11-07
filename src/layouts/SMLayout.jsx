@@ -5,8 +5,9 @@ import TopNav from "../components/top-nav/TopNav"
 
 import {
   SidebarHeaderSM,
-  SidebarnavItems,
-} from "../data/sidebars/SidebarNavs"
+  SidebarNavSM,
+  sidebarProfileSM
+} from "../data/sidebars/SidebarNavSM"
 
 const SMLayout = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
@@ -23,12 +24,13 @@ const SMLayout = ({ children }) => {
 
       <div
         className={`fixed inset-y-0 left-0 z-50 transition-transform duration-300 lg:sticky lg:translate-x-0 ${
-          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+          isSidebarOpen ? "translate-x-0 bg-white" : "-translate-x-full"
         }`}
       >
         <Sidebar
-          nav={SidebarnavItems}
+          nav={SidebarNavSM}
           header={SidebarHeaderSM}
+          profile={sidebarProfileSM}
         />
       </div>
 

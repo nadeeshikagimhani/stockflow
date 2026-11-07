@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 const SidebarNav = ({ items }) => {
   return (
     <nav className="mt-4">
-      <ul className="space-y-2">
+      <ul className="space-y-2 p-2">
         {items.map((item) => (
           <li key={item.lable}>
             <NavLink
