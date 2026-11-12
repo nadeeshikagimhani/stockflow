@@ -3,7 +3,7 @@ import SMLayout from "@/layouts/SMLayout"
 const StockSummary = () => {
   return (
     <SMLayout>
-      index
+      Stock summary
     </SMLayout>
   )
 }

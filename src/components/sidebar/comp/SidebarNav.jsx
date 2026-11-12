@@ -1,35 +1,40 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useLocation } from "react-router-dom";
 
-const SidebarNav = ({ items }) => {
+function SidebarNavItem({ navItem }) {
+
+  const { pathname } = useLocation();
+  const { activePath = [navItem.path], lable, icon: Icon, Badge, path, } = navItem;
+  const isActive = activePath.includes(pathname)
+
   return (
-    <nav className="mt-4">
-      <ul className="space-y-2 p-2">
-        {items.map((item) => (
-          <li key={item.lable}>
-            <NavLink
-              to={item.path}
-              className={({ isActive }) =>
-                `flex items-center gap-3 h-14 px-5 text-sm font-medium rounded-lg ${
-                  isActive
-                    ? "bg-[#e85831]/12 text-[#94361c]"
-                    : "text-gray-600 hover:bg-gray-100"
-                }`
-              }
-            >
-              <item.icon className="size-5 shrink-0" />
+    <li
+    className=
+    {isActive ? 
+    `bg-[#e85831]/12 text-[#94361c]  rounded-lg m-2` : 
+    `m-2 text-gray-600`}>
+      <NavLink to={path} className="flex items-center gap-3 w-full h-14 px-5 text-left text-sm font-medium hover:bg-gray-100 hover:rounded-lg">
+          <Icon className="size-5 shrink-0"/>
+          <span>
+            {lable}
+          </span>
+          {Badge && <span className="ml-auto bg-[#e85831] px-2 py-0.5 rounded-full text-white text-[12px]">{Badge}</span>}
+      </NavLink>
+    </li>
+  )
+}
 
-              <span>{item.lable}</span>
-
-              {item.badge && (
-                <span className="ml-auto rounded-full bg-[#e85831] px-2 py-0.5 text-xs text-white">
-                  {item.badge}
-                </span>
-              )}
-            </NavLink>
-          </li>
+const SidebarNav = ({items}) => {
+  return (
+    <div className="mt-4">
+      <ul className="space-y-4">
+        {items.map((navItem)=>(
+          <SidebarNavItem 
+            key={navItem.lable} 
+            navItem={navItem} 
+          />
         ))}
       </ul>
-    </nav>
+    </div>
   )
 }
 

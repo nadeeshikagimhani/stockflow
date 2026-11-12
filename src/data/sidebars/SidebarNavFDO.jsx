@@ -15,6 +15,7 @@ export const sidebarNavFDO = [
     lable: "Distributions",
     icon: Truck,
     path: "/fdo/distributions",
+    Badge: 4
   },
   {
     lable: "Run History",

@@ -22,6 +22,7 @@ export const SidebarNavSM = [
     lable: "Return Approvals",
     path: "/return-approvals",
     icon: RotateCcw,
+    Badge: 3
   },
 ];
 

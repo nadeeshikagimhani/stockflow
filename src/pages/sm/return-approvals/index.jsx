@@ -1,7 +1,10 @@
+import SMLayout from "@/layouts/SMLayout"
 
 const ReturnApprovals = () => {
   return (
-    <div>index</div>
+    <SMLayout>
+      Return Approvals
+    </SMLayout>
   )
 }
 
